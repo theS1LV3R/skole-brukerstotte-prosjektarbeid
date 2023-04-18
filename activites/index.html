@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities | Banana Peel High School</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/jquery-3.6.0.min.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Banana Peel High School</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#contact">Contact Us</a></li>
+          <li><a href="/faq">Frequently Asked Questions</a></li>
+          <li><a href="/gdpr">GDPR Information</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="event-list">
+      <input type="text" id="search-box" />
+      <ul id="banana-events"></ul>
+    </div>
+
+    <script>
+      /** @type {HTMLInputElement} */
+      const searchbox = document.querySelector("#search-box");
+      const list = document.querySelector("#banana-events");
+      const events = [
+        {
+          title: "Slip 'N Slide Day",
+          description:
+            "The entire school grounds are transformed into a giant Slip 'N Slide for a day of slippery fun.",
+        },
+        {
+          title: "The Great Banana Peel Hunt",
+          description:
+            "A scavenger hunt where students have to find hidden banana peels around the school to win prizes.",
+        },
+        {
+          title: "The Banana Olympics",
+          description:
+            "A day of silly banana-themed athletic events, such as the banana relay race and the banana peel toss.",
+        },
+        {
+          title: "Banana Costume Contest",
+          description:
+            "Students dress up as their favorite banana-themed characters, such as the Chiquita Banana lady or the Minions from Despicable Me.",
+        },
+        {
+          title: "Banana Bread Bake-Off",
+          description:
+            "A baking competition where students can show off their best banana bread recipes.",
+        },
+        {
+          title: "Slippery Science",
+          description:
+            "A science fair where students can showcase their experiments related to the slipperiness of banana peels.",
+        },
+        {
+          title: "Banana Eating Contest",
+          description:
+            "Who can eat the most bananas in one minute? Students can find out in this wacky competition.",
+        },
+        {
+          title: "Banana Peel Art Exhibition",
+          description:
+            "Students create art pieces using only banana peels and display them in a gallery exhibition.",
+        },
+        {
+          title: "The Banana Balancing Challenge",
+          description:
+            "Students have to balance as many bananas on their heads as possible without dropping them.",
+        },
+        {
+          title: "Banana Karaoke Night",
+          description:
+            "Students sing their favorite banana-themed songs, such as 'The Banana Boat Song' and 'Yes, We Have No Bananas'.",
+        },
+      ];
+
+      $(document).ready(function () {
+        // Add each event and description to the list
+        for (const element of events) {
+          $("#banana-events").append(
+            `<li>
+            <h3>
+            ${element.title}
+            </h3>
+            <p>
+              ${element.description}
+            </p>
+          </li>`
+          );
+        }
+      });
+
+      searchbox.addEventListener("keyup", function (ev) {
+        const query = this.value.toLowerCase();
+        const listItems = list.querySelectorAll("li");
+
+        listItems.forEach((item) => {
+          if (!item.innerText.toLowerCase().includes(query)) {
+            item.classList.add("hidden");
+          } else {
+            item.classList.remove("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

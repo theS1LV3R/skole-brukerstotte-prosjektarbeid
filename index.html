@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banana Peel High School</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Banana Peel High School</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#contact">Contact Us</a></li>
+          <li><a href="/faq">Frequently Asked Questions</a></li>
+          <li><a href="/gdpr">GDPR Information</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="banner">
+        <h2>Welcome to Banana Peel High School</h2>
+        <p>Where learning is a slippery slope!</p>
+      </section>
+
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          At Banana Peel High School, we believe in providing a truly unique
+          educational experience. Our students learn not only from textbooks and
+          lectures, but also from the
+          <span class="highlight">
+            real-world challenges of walking on a floor covered in banana peels.
+          </span>
+          Our faculty is made up of experienced and dedicated teachers who are
+          passionate about education. Come and see for yourself why Banana Peel
+          High School is the place to be!
+        </p>
+      </section>
+      <section id="campus_life">
+        <h2>Campus Life</h2>
+        <p>
+          Life at Banana Peel High School is never dull. Our students are always
+          on the move, whether they're rushing to class or trying to avoid
+          slipping on a particularly treacherous patch of flooring.
+        </p>
+        <p>We offer a wide range of extracurricular activities, including:</p>
+        <ul>
+          <li>Banana Peel Dancing Club</li>
+          <li>Slip 'N Slide Track and Field</li>
+          <li>Figure Skating on the Quad</li>
+          <li>Extreme Slip 'N Slide</li>
+        </ul>
+        <p>
+          Our sports teams are also renowned for their agility and quick
+          reflexes. The Banana Peel High School Slippery Slopes are perennial
+          champions in the
+          <span class="highlight">Inter-School Slip 'N Slide League.</span>
+        </p>
+        <p>
+          And of course, no campus event is complete without a few strategically
+          placed banana peels to keep things interesting.
+        </p>
+      </section>
+
+      <section id="academics">
+        <h2>Academics</h2>
+        <p>
+          Our academic programs are designed to challenge and inspire students.
+          We offer a wide range of courses in all subject areas, including
+          advanced placement courses for those looking for a more rigorous
+          curriculum. Our students consistently perform well on standardized
+          tests and go on to attend some of the top colleges and universities in
+          the country.
+        </p>
+        <p>
+          Our curriculum is designed to help students develop important skills
+          such as balance, agility, and the ability to recover from a fall. We
+          offer a wide range of courses, including:
+        </p>
+        <ul>
+          <li>Banana Peel Physics</li>
+          <li>Slippery Slope Calculus</li>
+          <li>Advanced Skid Mark Analysis</li>
+          <li>Ice Rink Management</li>
+        </ul>
+      </section>
+
+      <section id="admissions">
+        <h2>Admissions</h2>
+        <p>
+          Admission to Banana Peel High School is highly competitive, but we
+          welcome all applicants who are committed to learning and growing. Our
+          application process is simple: just submit a video of yourself
+          navigating a particularly difficult patch of banana peels. Bonus
+          points if you can do it while juggling.
+        </p>
+        <p>
+          Financial aid is available for students who demonstrate a strong
+          commitment to the art of banana peel navigation, as well as
+          exceptional abilities in banana-related fields such as agriculture and
+          smoothie-making.
+        </p>
+      </section>
+    </main>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Ready to slip into something more comfortable? Visit us at:</p>
+      <address>
+        Banana Peel High School<br />
+        123 Slippery Slope St.<br />
+        Peel City, USA<br />
+      </address>
+      <p>Or use this form to send us a message:</p>
+      <div id="zammad-feedback-form">form will be placed in here</div>
+    </section>
+    <footer>
+      <p>&copy; 2023 Banana Peel High School. All rights reserved.</p>
+    </footer>
+    <script id="zammad_form_script" src="https://zammad.if11.xyz/assets/form/form.js"></script>
+
+    <script>
+    $(function() {
+      $('#zammad-feedback-form').ZammadForm({
+        messageTitle: 'Feedback Form',
+        messageSubmit: 'Submit',
+        messageThankYou: 'Thank you for your inquiry (#%s)! We\'ll contact you as soon as possible.',
+        showTitle: true,
+        attachmentSupport: true
+      });
+    });
+    </script>
+</html>
